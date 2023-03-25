@@ -33,5 +33,5 @@
 * Create an object **app** in flask class with `__name__` which represents current app.py file.
 * Create `/` route to render default page html.
 * Create a route `/course` to get user input and if keyword is present in the Mongo DB it is shown in `results.html` page.
-* Run the flask app with `app.run()` code.
+* Run the flask app with python app.py
 
