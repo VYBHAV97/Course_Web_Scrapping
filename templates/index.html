@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Search for any iNeuron course</h1>
+
+    <div class="form">
+        <form action="/course" method="POST">
+            <select name="content" required>
+			    <option value="" disabled selected>Select Course</option>
+			    {% for course in course_in %}
+			    <option value="{{course}}">{{course}}</option>
+			    {% endfor %}
+		    </select>
+	        <br />
+	        <button type="submit">SUBMIT</button>
+        </form>
+	</div>
+</div>
+{% endblock %}
